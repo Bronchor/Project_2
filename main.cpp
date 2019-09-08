@@ -46,16 +46,16 @@ int main() {
 
     while (!fileData.eof())                                                         // read file until the end
     {
-        getline(fileData, readField, ',');                              // read until a comma
+        getline(fileData, readField, ',');                                          // read until a comma
         int courseNumber = stoi(readField);                                         // parse course number
 
-        getline(fileData, readField, ',');                              // read until a comma
+        getline(fileData, readField, ',');                                          // read until a comma
         string courseName = readField;                                              // store course name
 
-        getline(fileData, readField, ',');                              // read until a comma
+        getline(fileData, readField, ',');                                          // read until a comma
         unsigned int credits = stoi(readField);                                     // parse course credits
 
-        getline(fileData, readField);                                        // read until a comma
+        getline(fileData, readField);                                               // read until a comma
         double grade = stod(readField);                                             // parse course grade
 
         Course* newCourse = new Course(courseNumber, courseName, credits, grade);   // create new course with data
@@ -68,7 +68,7 @@ int main() {
 // Use Data 🛠✔
    courseList.PrintList();                                  // print courses in order
    double gpa = courseList.CalculateGPA();                  // calculate and store GPA
-   cout.precision(4);                                 // set decimal place precision
+   cout.precision(4);                                       // set decimal place precision
    cout << "Cumulative GPA: " << gpa << endl;               // print GPA with high precision
    cout << endl << "Press the [Enter] key to quit...";      // print final message
    cin.get();                                               // wait for user input
